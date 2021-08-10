@@ -25,3 +25,6 @@ Techs: Java EE 8, HTML/CSS/JS, Bootstrap, SQLServer, MVC, NetBeans8.2
   
  # Some images of the application:
 ![2](https://user-images.githubusercontent.com/65969192/128896370-356d4d6c-4662-4b36-acc7-97fe543fd0b7.png)
+
+
+![minhhoa1](https://user-images.githubusercontent.com/65969192/128896708-53e9ff79-f6a1-4102-a262-c3d57926ba06.png)
