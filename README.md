@@ -24,4 +24,4 @@ Techs: Java EE 8, HTML/CSS/JS, Bootstrap, SQLServer, MVC, NetBeans8.2
   Promotion history
   
  # Some images of the application:
- https://github.com/hocchudong/git-github-for-sysadmin/blob/master/README.md?fbclid=IwAR1LUJdCUVJ2m_P4QV3LZorURnI-iSAOxS4HNLi7BZpRncklHpaiuhmoNO8
+
