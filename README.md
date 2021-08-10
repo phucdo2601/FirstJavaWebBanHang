@@ -24,4 +24,4 @@ Techs: Java EE 8, HTML/CSS/JS, Bootstrap, SQLServer, MVC, NetBeans8.2
   Promotion history
   
  # Some images of the application:
-
+![2](https://user-images.githubusercontent.com/65969192/128896370-356d4d6c-4662-4b36-acc7-97fe543fd0b7.png)
