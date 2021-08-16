@@ -22,6 +22,25 @@ Techs: Java EE 8, HTML/CSS/JS, Bootstrap, SQLServer, MVC, NetBeans8.2
   Insert user
   Assign user to promotion list
   Promotion history
+
+## SQL Querry execute bussiness: load 10 first products, and load more 10 products
+	# Load 10 first products
+	select top 10 p.productID, p.categoryID, p.productName,
+	p.[image], p.[price], p.[quantity], p.[sale], p.[description]
+	from Product as p Left Join Category as c
+	on p.categoryID = c.categoryID
+	where c.status = 1
+	order by p.productID asc
+	
+	# Load more 10 products
+	select p.productID, p.categoryID, p.productName,
+	p.[image], p.[price], p.[quantity], p.[sale], p.[description]
+	from Product as p Left Join Category as c
+	on p.categoryID = c.categoryID
+	where c.status = 1
+	order by p.productID
+	OFFSET ? ROWS
+	FETCH NEXT 10 ROWS ONLY
   
  # Some images of the application:
  ![minhhoa1](https://user-images.githubusercontent.com/65969192/128896708-53e9ff79-f6a1-4102-a262-c3d57926ba06.png)

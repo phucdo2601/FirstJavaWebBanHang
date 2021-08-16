@@ -35,7 +35,7 @@ public class LoadMoreServelet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String amount = request.getParameter("exits");
         int iAmount = Integer.parseInt(amount);
-        System.out.println("So luong phan tu truoc khi bam load them: "+iAmount);
+        
         try {
             ProductDAO proDAO = new ProductDAO();
             //cau lenh nay lay 3 san pham tiep theo dua tren so luong san san phan da hien thi
