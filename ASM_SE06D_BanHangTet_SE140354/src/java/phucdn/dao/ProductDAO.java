@@ -406,9 +406,12 @@ public class ProductDAO {
         try {
             con = MyConnection.getConnection();
             if (con != null) {
-                String sql = "select TOP 10 productID, categoryID, productName, image, "
-                        + "description, price, quantity, sale \n"
-                        + "from Product";
+                String sql = "select top 10 p.productID, p.categoryID, p.productName,\n"
+                        + "p.[image], p.[price], p.[quantity], p.[sale], p.[description]\n"
+                        + "from Product as p Left Join Category as c\n"
+                        + "on p.categoryID = c.categoryID\n"
+                        + "where c.status = 1\n"
+                        + "order by p.productID asc";
                 stm = con.prepareStatement(sql);
                 rs = stm.executeQuery();
                 while (rs.next()) {
@@ -448,10 +451,12 @@ public class ProductDAO {
         try {
             con = MyConnection.getConnection();
             if (con != null) {
-                String sql = "select productID, categoryID, productName, image,\n"
-                        + "description, price, quantity, sale \n"
-                        + "from Product\n"
-                        + "ORDER BY productID\n"
+                String sql = "select p.productID, p.categoryID, p.productName,\n"
+                        + "p.[image], p.[price], p.[quantity], p.[sale], p.[description]\n"
+                        + "from Product as p Left Join Category as c\n"
+                        + "on p.categoryID = c.categoryID\n"
+                        + "where c.status = 1\n"
+                        + "order by p.productID\n"
                         + "OFFSET ? ROWS\n"
                         + "FETCH NEXT 10 ROWS ONLY";
                 stm = con.prepareStatement(sql);

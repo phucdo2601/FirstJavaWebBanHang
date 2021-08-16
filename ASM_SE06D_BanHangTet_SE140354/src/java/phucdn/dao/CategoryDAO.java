@@ -52,7 +52,7 @@ public class CategoryDAO {
             con = MyConnection.getConnection();
             if (con != null) {
                 String sql = "select categoryID, categoryName, description,status\n"
-                        + "from Category where categoryID like ?";
+                        + "from Category where status=1 and categoryID like ?";
                 stm = con.prepareStatement(sql);
                 stm.setString(1, "%" + search + "%");
                 rs = stm.executeQuery();
